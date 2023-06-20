@@ -1,0 +1,21 @@
+version: "2.2"
+services:
+  redis:
+    image: "redis:alpine"
+    restart: always
+    command: redis-server --save 60 10 --loglevel warning
+    volumes:
+    - cache:/data
+  web:
+    build: .
+    depends_on:
+    - redis
+    volumes:
+    - ./src:/src
+    links:
+    - redis 
+    ports:
+    - 5000:5000
+volumes:
+  cache:
+    driver: local
