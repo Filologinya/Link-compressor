@@ -1,0 +1,7 @@
+ef34ddf3fad5f9338e6acd920e192b9bfe209eec
+# created by virtualenv automatically
+src/Lib/
+src/Scripts/
+src/pyvenv.cfg
+__pycache__/
+*.py[cod]
