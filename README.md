@@ -20,5 +20,7 @@ Use `docker-compose build` and `docker-compose up` to run application.
     }
     ```
 6. Paste short link after http://localhost:5000/s/
-7. Back to `docker-compose` process and restart it
-8. Check that http://localhost:5000/s/{YOUR_SHORT_LINK} redirect you to the original link
+7. Back to `docker-compose` process and stop it
+8. Delete container by `docker-compose rm`
+9. Run new container with `docker-compose up`
+10. Check that http://localhost:5000/s/{YOUR_SHORT_LINK} redirect you to the original link
